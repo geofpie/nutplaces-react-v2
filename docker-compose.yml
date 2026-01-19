@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  api:
+    build: ./api
+    container_name: nutplaces-api
+    env_file: .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data/api:/data
+    depends_on:
+      - bot
+
+  bot:
+    build: ./bot
+    container_name: nutplaces-bot
+    env_file: .env
+    volumes:
+      - ./data/bot:/data
+
+  frontend:
+    build: ./frontend
+    container_name: nutplaces-frontend
+    env_file: .env
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules

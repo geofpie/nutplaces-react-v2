@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap");
+
+:root {
+  color-scheme: light;
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  background: radial-gradient(circle at top, #f7f0e8, #f4e4d1 45%, #f2d7ba 100%);
+  color: #24150c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-nav {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(36, 21, 12, 0.08);
+}
+
+.login-grid {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: 4rem 1.5rem;
+}
+
+.login-card {
+  max-width: 420px;
+  width: 100%;
+}
+
+.login-body {
+  gap: 1rem;
+}
+
+.form-stack {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.subtitle {
+  margin: 0 0 1rem;
+  color: rgba(36, 21, 12, 0.7);
+}
+
+.divider {
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(36, 21, 12, 0.5);
+}
+
+.magic-instructions {
+  font-size: 0.95rem;
+  color: rgba(36, 21, 12, 0.8);
+}
+
+.status {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.home-grid {
+  flex: 1;
+  padding: 3rem 1.5rem 4rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.hero {
+  max-width: 640px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 3vw, 3.2rem);
+  margin: 0 0 0.75rem;
+}
+
+.nav-panel {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 24px 60px rgba(36, 21, 12, 0.12);
+}
+
+.page-panel h2 {
+  margin-top: 0;
+}
+
+@media (min-width: 900px) {
+  .home-grid {
+    grid-template-columns: minmax(280px, 1fr) minmax(420px, 1.4fr);
+    align-items: start;
+  }
+}
