@@ -1,0 +1,5 @@
+data/api/nutplaces.db
+/data/api/uploads
+.env
+api/app/__pycache__/db.cpython-313.pyc
+/data

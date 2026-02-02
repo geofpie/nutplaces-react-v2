@@ -10,11 +10,22 @@
   },
   "dependencies": {
     "@heroui/react": "latest",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "@heroui/theme": "latest",
+    "@internationalized/date": "latest",
+    "framer-motion": "latest",
+    "leaflet": "latest",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-easy-crop": "latest",
+    "react-router-dom": "latest"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "4.3.4",
-    "vite": "5.4.11"
+    "@vitejs/plugin-react": "latest",
+    "@tailwindcss/postcss": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "vite": "latest"
   }
 }

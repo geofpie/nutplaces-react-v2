@@ -28,3 +28,21 @@ services:
     volumes:
       - ./frontend:/app
       - /app/node_modules
+
+  caddy:
+    image: caddy:2
+    container_name: nutplaces-caddy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - api
+      - frontend
+
+volumes:
+  caddy_data:
+  caddy_config:
